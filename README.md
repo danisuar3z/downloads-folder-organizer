@@ -2,7 +2,7 @@
 Process the files in downloads folder moving them to specified new folders
 folders created:  
 processed/  
-processed/docs      # For .docx, .pdf, etc  
+processed/docs<br      /># For .docx, .pdf, etc  
 processed/data      # For .txt, .csv, xslx etc  
 processed/media     # For .mp4, .mkv, etc  
 processed/imgs      # For .png, .jpg, etc  
