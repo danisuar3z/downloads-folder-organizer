@@ -10,6 +10,8 @@
 
 import os
 
+from my_input import my_input
+
 IMG_EXTENSIONS = ['png', 'jpg', 'peg', 'gif',]
 DOC_EXTENSIONS = ['pdf', 'doc', 'ocx', 'ppt', 'ptx', 'des', 'eet',]
 DAT_EXTENSIONS = ['txt', 'csv', 'lsx', 'xls',]
@@ -151,22 +153,42 @@ def main():
         f'{"| 2- Process a Downloads subfolder":65}{" |":>}\n'
         f'{"| 3- Process current folder: "}{os.getcwd():37}{"|":>}\n'
         f'{"*"*67}\n')
-    ok = False
-    while not ok:
-        ans = input()
-        if ans.lower() == 'y':
-            ok = True
+    ans = my_input('Type an option: ', ['1', '2', '3'])
+    
+    if ans == '1':  # Process Downloads folder
+        dirs = my_input('Do you already have the subfolders processed/ and'
+                 ' imgs/docs/etc? [y/n]', ['y', 'n'])
+        if dirs.lower() == 'n':
             os.chdir(_downloads)
             make_dirs()
-            process_downloads_folder()
-        elif ans.lower() == 'n':
-            ok = True
-        
-        
+        print('Processing...')
+        process_downloads_folder()
+   
+    elif ans == '2':  # Process a Downloads subfolder
+        dirs = my_input('Do you already have the subfolders processed/ and'
+                 ' imgs/docs/etc? [y/n]', ['y', 'n'])
+        if dirs.lower() == 'n':
+            os.chdir(_downloads)
+            make_dirs()
+        subfolder = my_input('What\'s the exact name of the subfolder?')
+        print('Processing...')
+        process_downloads_subfolder(subfolder)
+
+    elif ans == '3':  # Process current folder
+        dirs = my_input('Do you already have the subfolders processed/ and'
+                 ' imgs/docs/etc? [y/n]', ['y', 'n'])
+        if dirs.lower() == 'n':
+            make_dirs()        
+        print('Processing...')
+        process_actual_folder()
+
+
 if __name__ == '__main__':
     main()
+
 
 '''
 Add zip/rar
 Improve extension reading, maybe with split method.
+Change multiple conditionals for dictionary.
 '''
