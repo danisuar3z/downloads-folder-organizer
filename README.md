@@ -1,14 +1,15 @@
+<pre>
 # downloads-folder-organizer
 Process the files in downloads folder moving them to specified new folders
 folders created:  
 processed/  
-processed/docs<br      /># For .docx, .pdf, etc  
+processed/docs      # For .docx, .pdf, etc  
 processed/data      # For .txt, .csv, xslx etc  
 processed/media     # For .mp4, .mkv, etc  
 processed/imgs      # For .png, .jpg, etc  
 processed/setups    # For .exe, etc  
 processed/zip-rars  # For .zip, .rar, etc  
-
+</pre>
 *******************************************************************  
  Welcome to the Downloads Folder organizer. To exit press ctrl+c.  
  1- Process Downloads folder  
