@@ -149,10 +149,12 @@ def main():
     print(
         f'\n{"*"*67}\n'
         f'{"| Welcome to the Downloads Folder organizer. To exit press ctrl+c.|":67}'
+        f'\n{"| What do you want to do?":66}{"|":>}'
         f'\n{"| 1- Process Downloads folder":65}{" |":>}\n'
         f'{"| 2- Process a Downloads subfolder":65}{" |":>}\n'
         f'{"| 3- Process current folder: "}{os.getcwd():37}{"|":>}\n'
-        f'{"*"*67}\n')
+        f'{"*"*67}\n'
+        f'{"by Dani Suarez":>67}')
     ans = my_input('Type an option: ', ['1', '2', '3'])
     
     if ans == '1':  # Process Downloads folder
