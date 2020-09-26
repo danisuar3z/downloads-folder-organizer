@@ -170,7 +170,7 @@ def main():
         if dirs.lower() == 'n':
             os.chdir(_downloads)
             make_dirs()
-        subfolder = my_input('What\'s the exact name of the subfolder?')
+        subfolder = input('What\'s the exact name of the subfolder?')
         print('Processing...')
         process_downloads_subfolder(subfolder)
 
