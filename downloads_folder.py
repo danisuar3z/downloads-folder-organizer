@@ -17,7 +17,7 @@ DOC_EXTENSIONS = ['pdf', 'doc', 'ocx', 'ppt', 'ptx', 'des', 'eet',]
 DAT_EXTENSIONS = ['txt', 'csv', 'lsx', 'xls',]
 MED_EXTENSIONS = ['mp4', 'mp3', 'wma', 'wav', 'mkv',]
 SCR_EXTENSIONS = ['.py', 'ynb', 'aml', 'js', 'son', 'bat', 'css',]
-SET_EXTENSIONS = ['exe',]
+SET_EXTENSIONS = ['exe', 'msi']
 ZIP_EXTENSIONS = ['zip', 'rar',]
 
 _home  = os.path.expanduser('~')
